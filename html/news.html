@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>The AlloSphere Research Group</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/allosphere.css" type="text/css" media="screen" title="no title" charset="utf-8">
+    <style>
+
+    /* GLOBAL STYLES
+    -------------------------------------------------- */
+    /* Padding below the footer and lighter body text */
+
+    body {
+      padding-bottom: 40px;
+      color: #5a5a5a;
+    }
+    
+/*    .row {
+      padding-top:100px;
+    }*/
+
+
+    /* CUSTOMIZE THE NAVBAR
+    -------------------------------------------------- */
+
+    /* Special class on .container surrounding .navbar, used for positioning it into place. */
+    .navbar-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      margin-top: 20px;
+      margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
+    }
+    .navbar-wrapper .navbar {
+
+    }
+    
+    .navbar-inverse a { color: #bbb; }
+    /* Remove border and change up box shadow for more contrast */
+    .navbar .navbar-inner {
+      border: 0;
+      -webkit-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+         -moz-box-shadow: 0 2px 10px rgba(0,0,0,.25);
+              box-shadow: 0 2px 10px rgba(0,0,0,.25);
+    }
+
+    /* Downsize the brand/project name a bit */
+    .navbar .brand {
+      padding: 14px 20px 16px; /* Increase vertical padding to match navbar links */
+      font-size: 16px;
+      font-weight: bold;
+      text-shadow: 0 -1px 0 rgba(0,0,0,.5);
+    }
+
+    /* Navbar links: increase padding for taller navbar */
+    .navbar .nav > li > a {
+      padding: 15px 20px;
+    }
+
+    /* Offset the responsive button for proper vertical alignment */
+    .navbar .btn-navbar {
+      margin-top: 10px;
+    }
+
+    /* CUSTOMIZE THE CAROUSEL
+    -------------------------------------------------- */
+
+    /* Carousel base class */
+    .carousel {
+      margin-bottom: 60px;
+    }
+
+    .carousel .container {
+      position: relative;
+      z-index: 9;
+    }
+
+    .carousel-control {
+      height: 80px;
+      margin-top: 0;
+      font-size: 120px;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+      background-color: transparent;
+      border: 0;
+      z-index: 10;
+    }
+
+    .carousel .item {
+      height: 500px;
+    }
+    .carousel img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      height: 500px;
+    }
+
+    .carousel-caption {
+      background-color: transparent;
+      position: static;
+      max-width: 550px;
+      padding: 0 20px;
+      margin-top: 200px;
+    }
+    .carousel-caption h1,
+    .carousel-caption .lead {
+      margin: 0;
+      line-height: 1.25;
+      color: #fff;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+    }
+    .carousel-caption .btn {
+      margin-top: 10px;
+    }
+
+    .vcenter {
+        display: inline-block;
+        vertical-align: middle;
+        float: none;
+    }
+
+    /* MARKETING CONTENT
+    -------------------------------------------------- */
+
+    /* Center align the text within the three columns below the carousel */
+    .marketing .span4 {
+      text-align: center;
+    }
+    .marketing h2 {
+      font-weight: normal;
+    }
+    .marketing .span4 p {
+      margin-left: 10px;
+      margin-right: 10px;
+    }
+    
+    /* center images on news page */
+    .marketing .span2 {
+      display:inline-block;
+    }
+    
+    .marketing {
+      padding-top:100px;
+      display:block;
+      position:relative;
+    }
+
+    /* Featurettes
+    ------------------------- */
+
+    .featurette-divider {
+      margin: 80px 0; /* Space out the Bootstrap <hr> more */
+    }
+    .featurette {
+      padding-top: 20px; /* Vertically center images part 1: add padding above and below text. */
+      padding-bottom:60px;
+      overflow: hidden; /* Vertically center images part 2: clear their floats. */
+    }
+    .featurette-image {
+/*      margin-top: -120px; /* Vertically center images part 3: negative margin up the image the same amount of the padding to center it. */*/
+    }
+
+    /* Give some space on the sides of the floated elements so text doesn't run right into it. */
+    .featurette-image.pull-left {
+      margin-right: 40px;
+    }
+    .featurette-image.pull-right {
+      margin-left: 40px;
+    }
+
+    /* Thin out the marketing headings */
+    .featurette-heading {
+      font-size: 50px;
+      font-weight: 300;
+      line-height: 1;
+      letter-spacing: -1px;
+    }
+
+    .carousel-caption {
+      background-color:rgba(0,0,0,.5);
+    }
+    
+    .date {
+      margin:0;
+      font-size:.7em;
+      font-weight:normal;
+/*      background:#888;*/
+      padding:0 .5em;
+/*      color:#fff;*/
+      display:inline-block;
+      box-sizing:border-box;
+      position:relative;
+      height:100%;
+      float:right;
+/*      min-width:7em;*/
+      text-align:right;
+    }
+    
+    h3 {
+      padding:0;
+      margin:0;
+      height:40px;
+      margin-bottom:.5em;
+/*      letterine-height:40px;*/
+/*      border-bottom:1px solid #aaa;*/
+      box-sizing:border-box;
+      
+    }
+    /* RESPONSIVE CSS
+    -------------------------------------------------- */
+
+    @media (max-width: 979px) {
+
+      .container.navbar-wrapper {
+        margin-bottom: 0;
+        width: auto;
+      }
+      .navbar-inner {
+        border-radius: 0;
+        margin: -20px 0;
+      }
+
+      .carousel .item {
+        height: 500px;
+      }
+      .carousel img {
+        width: auto;
+        height: 500px;
+      }
+
+      .featurette {
+        height: auto;
+        padding: 0;
+      }
+      .featurette-image.pull-left,
+      .featurette-image.pull-right {
+        display: block;
+        float: none;
+        max-width: 40%;
+        margin: 0 auto 20px;
+      }
+    }
+
+
+    @media (max-width: 767px) {
+
+      .navbar-inner {
+        margin: -20px;
+      }
+
+      .carousel {
+        margin-left: -20px;
+        margin-right: -20px;
+      }
+      .carousel .container {
+
+      }
+      .carousel .item {
+        height: 300px;
+      }
+      .carousel img {
+        height: 300px;
+      }
+      .carousel-caption {
+        width: 65%;
+        padding: 0 70px;
+        margin-top: 100px;
+        background-color:rgba(0,0,0,1);
+      }
+      .carousel-caption h1 {
+        font-size: 30px;
+      }
+      .carousel-caption .lead,
+      .carousel-caption .btn {
+        font-size: 18px;
+      }
+
+      .marketing .span4 + .span4 {
+        margin-top: 40px;
+      }
+
+      .featurette-heading {
+        font-size: 30px;
+      }
+      .featurette .lead {
+        font-size: 18px;
+        line-height: 1.5;
+      }
+
+    }
+    </style>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+                    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+                                   <link rel="shortcut icon" href="assets/ico/favicon.png">
+  </head>
+
+  <body>
+
+
+
+    <!-- NAVBAR
+    ================================================== -->
+    <div class="navbar-wrapper">
+      <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
+      <div class="container">
+
+        <div class="navbar navbar-inverse">
+          <div class="navbar-inner">
+            <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
+            <!-- <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button> -->
+            <a class="brand" href="index.html">AlloSphere Research Group</a>
+            <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+            <div class="nav-collapse collapse">
+              <ul class="nav">
+                <li><a href="facility.html">Facility</a></li>
+                <li><a href="news.html">News</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Research <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li class="nav-header">Areas of Research</li>                    
+                    <li><a href="#">Arts and Entertainment</a></li>
+                    <li><a href="#">Bio-technologies and medical research</a></li>
+                    <li><a href="#">Physics and Quantum Mechanics</a></li>
+                    <li><a href="#">Materials research</a></li>                    
+                    <li class="divider"></li>
+                    <li class="nav-header">Specific Projects</li>
+                    <li><a href="research/allobrain.html">The AlloBrain</a></li>
+                    <li><a href="research/hydrogen_bond.html">Multi-Center Hydrogen Bond</a></li>
+                    <li><a href="research/quantum.html">Quantum Mechanics in a Hydrogen-Like Atom</a></li>
+                    <li><a href="research/artificial_nature.html">Artificial Nature</a></li>
+                    <li><a href="research/graph_visualizations.html">Graph Visualization in Immersive Environments</a></li>                    
+                  </ul>
+                </li>
+                <li><a href="people.html">People</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <!-- Read about Bootstrap dropdowns at http://twbs.github.com/bootstrap/javascript.html#dropdowns -->
+
+              </ul>
+            </div><!--/.nav-collapse -->
+          </div><!-- /.navbar-inner -->
+        </div><!-- /.navbar -->
+
+      </div> <!-- /.container -->
+    </div><!-- /.navbar-wrapper -->
+
+    <div class="container marketing">
+      <div class="row">
+        <div class="span2">
+          <img src="../assets/img/mat_logo.png" width=150></div>
+          <div class="span10">
+          <h4><span class='date'>6/6/2014</span>MAT End of Year Show and AlloSphere Open House.</h4>
+          <p class="lead">
+          On June 6th the <a href="http://mat.ucsb.edu">Media Arts &amp; Technology program</a> will host its annual 
+          <a href="http://show.mat.ucsb.edu">end of year show</a>. The show will prominently feature works from members of the AlloSphere Research Group
+          and tours of the AlloSphere will also be given on a first-come, first-serve basis.
+          </p>
+        </div>
+      </div>
+      
+      <hr>
+      
+      <div class="row">
+        <div class="span2"><img src="../assets/img/ix.jpg"></div>
+        <div class="span10">
+          <h4>Dr. Kuchera-Morin speaks at the IX Symposium<span class='date'>5/22/2014</span></h4>
+          <p class="lead">
+          Dr. Kuchera-Morin was part of a keynote panel discussion on the theme of <em>Innovation &amp; Formats</em>, as part of the 
+          <a href="http://ix.sat.qc.ca/?language=en">2014 International Symposium on Immersive Creativity</a>, held in Montreal, Canada.
+          </p>
+        </div>
+      </div>
+      
+      <hr>
+      
+      <div class="row">
+        <div class="span2"><img src="../assets/img/cplusplus_now.png"></div>
+        <div class="span10">
+          <h4>Pablo Colapinto speaks at C++ Now.<span class='date'>5/13/2014</span></h4>
+          <p class="lead">
+          ARG Researcher and Deutsch Fellow Pablo Colapinto presented his research on Versor, a C++ library for geometric algebra,
+          in a talk titled <em>Generic Programming of Generic Spaces: Compile-Time Geometric Algebra with C++11</em>.
+          </p>
+        </div>
+      </div>
+      
+      <hr>
+
+      <div class="row">
+        <div class="span2"><img src="../assets/img/calarts.png"></div>
+        <div class="span10">
+          <h4><span class='date'>5/9/2014</span>Dr. Matt Wright speaks at the CalArts Digital Arts Expo.</h4>
+          <p class="lead">
+          ARG Research Director and MAT Lecturer Dr. Matt Wright spoke at the <a href="http://digitalartsexpo.calarts.edu">2014 CalArts Digital Arts Expo and Symposium for Computer Science
+          in Arts Education</a>. His talked focused on using C++ and the <a href="https://github.com/AlloSphere-Research-Group/AlloSystem">AlloSystem library</a>
+          to teach programming to beginning digital arts practitioners.
+          </p>
+        </div>
+      </div>
+      
+      <hr>
+      
+      <div class="row">
+        <div class="span2"><img class="center-block" src="../assets/img/cuda.png" width=125 /></div>
+        <div class="span10">
+          <h4><span class='date'>5/4/2014</span>UCSB is now a CUDA Research Center.</h4>
+          <p class="lead">
+            Under a proposal by Dr.JoAnn Kuchera-Morin, UCSB was accepted as a CUDA research center. Becoming a <a href="https://research.nvidia.com/content/cuda-research-center-program" target="_blank">NVIDIA CUDA Research Center</a>
+            provides a variety of benefits to the campus, and ensures early access for AlloSphere researchers to cutting-edge NVIDIA hardware
+            and software for parallel computing.
+          </p>
+        </div>
+      </div>
+      
+      <hr>
+      
+      <div class="row">
+        <div class="span2"><img src="../assets/img/nvidia_logo.png"></div>
+        <div class="span10">
+          <h4><span class='date'>3/25/2014</span>Dr. Kuchera-Morin speaks at 2014 NVIDIA GPU Technology Conference.</h4>
+          <p class="lead">
+          Dr. Kuchera-Morin was a featured speaker on the potential for large scale, immersive visualizations and sonifications
+          to drive data discovery.
+          </p>
+        </div>
+      </div>
+      
+      <hr>
+      
+      <div class="row">
+        <div class="span2"><img src="../assets/img/computers_and_graphics.gif"><img width=110 src="../assets/img/computer_graphics_and_applications.png"></div>
+        <div class="span10">
+          <h4><span class='date'>2/21/2014</span>Two new journal publications for the ARG.</h4>
+          <p class="lead">
+          The first, spearheaded by former ARG researcher Dr. Graham Wakefield, is titled <em>Spatial Interaction in a Multi-User Immersive Instrument</em> 
+          and appeared in the November / December issue of Computer Graphics &amp; Applications. The second, with first author Dr. JoAnn Kuchera-Morin, is
+          titled <em>Immersive, Full-Surround, Multi-User System Design</em>, and appears in the May issue of Computers &amp; Graphics.
+          </p>
+          <p>
+          Kuchera-Morin, J., Wright, M., Wakefield, G., Roberts, C., Höllerer, T., Adderton, D. Immersive, Full-Surround, Multi-User System Design. Computers & Graphics. Volume 40, May 2014
+          </p>
+          <p>
+          Wakefield, G., Höllerer, T., Kuchera-Morin, J., Roberts, C., Wright, M. Spatial Interaction in a Multi-User Immersive Instrument. Computer Graphics & Applications. Nov.-Dec. 2103, pages 14-20.
+          </p>
+        </div>
+      </div>
+      
+      <hr>
+      
+      <div class="row">
+        <div class="span2"><img src="../assets/img/deutsch.png"></div>
+        <div class="span10">
+          <h4><span class='date'>11/4/2013</span>UCSB press release on the ARG.</h4>
+          <p class="lead">
+          A news release by UCSB's Office of Public Affairs and Communications titled "Hybrid Researchers Are Working at the Intersection
+          of Art and Science", describes the hybrid research being done in the AlloSphere made possible by a grant by the 
+          <a href="http://rwdfoundation.org">Robert W. Deutsch Foundation</a>.
+          </p>
+        </div>
+      </div>
+      
+      <!-- /END THE FEATURETTES -->
+      
+      <hr>
+
+      <!-- FOOTER -->
+      <footer>
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>&copy; 2014 AlloSphere Research Group</p>
+      </footer>
+
+    </div><!-- /.container -->
+
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="../assets/js/jquery.js"></script>
+    <script src="../assets/js/bootstrap-transition.js"></script>
+    <script src="../assets/js/bootstrap-alert.js"></script>
+    <script src="../assets/js/bootstrap-modal.js"></script>
+    <script src="../assets/js/bootstrap-dropdown.js"></script>
+    <script src="../assets/js/bootstrap-scrollspy.js"></script>
+    <script src="../assets/js/bootstrap-tab.js"></script>
+    <script src="../assets/js/bootstrap-tooltip.js"></script>
+    <script src="../assets/js/bootstrap-popover.js"></script>
+    <script src="../assets/js/bootstrap-button.js"></script>
+    <script src="../assets/js/bootstrap-collapse.js"></script>
+    <script src="../assets/js/bootstrap-carousel.js"></script>
+    <script src="../assets/js/bootstrap-typeahead.js"></script>
+    <script>
+      !function ($) {
+        $(function(){
+          // carousel demo
+          $('#myCarousel').carousel()
+        })
+      }(window.jQuery)
+    </script>
+    <script src="assets/js/holder/holder.js"></script>
+  </body>
+</html>
