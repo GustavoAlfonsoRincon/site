@@ -11,23 +11,23 @@
     <link href="../../assets/css/bootstrap.css" rel="stylesheet">
     <link href="../../assets/css/bootstrap-responsive.css" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/css/allosphere.css" type="text/css" media="screen" title="no title" charset="utf-8">
-    
+
     <style>
     #csl-item1 { background:url(../../assets/img/allobrain_banner_sized2.jpg); background-color:#000; }
 /*    #csl-item2 { background:url(../../assets/img/graph_tablets2.png);    background-color:#000; }
-    #csl-item3 { background:url(../../assets/img/basak_sized.jpg);      background-color:#000; } */   
-    
+    #csl-item3 { background:url(../../assets/img/basak_sized.jpg);      background-color:#000; } */
+
     #csl-item1, #csl-item2, #csl-item3 {
-      background-repeat: no-repeat;   
-      background-position: center top; 
+      background-repeat: no-repeat;
+      background-position: center top;
     }
-    
+
     .marketing {
 /*      padding-top:100px;*/
       display:block;
       position:relative;
     }
-    
+
     .date {
       margin:0;
       font-size:.7em;
@@ -40,7 +40,7 @@
       float:right;
       text-align:right;
     }
-    
+
     h3 {
       padding:0;
       margin:0;
@@ -67,54 +67,35 @@
 
 
 
-    <!-- NAVBAR
-    ================================================== -->
-    <div class="navbar-wrapper">
-      <!-- Wrap the .navbar in .container to center it within the absolutely positioned parent. -->
-      <div class="container">
+      <!-- NAVBAR
+      ================================================== -->
+      <div class="navbar-wrapper">
+          <div class="container">
+              <div class="navbar navbar-inverse">
+                  <div class="navbar-inner">
+                      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                      </a>
+                      <a class="brand" href="../../index.html">AlloSphere Research Facility</a>
+                      <div class="nav-collapse collapse">
+                          <ul class="nav pull-right">
+                              <li><a href="../facility.html">About</a></li>
+                              <li><a href="../news.html">News</a></li>
+                              <li><a href="../research.html">Research</a></li>
+                              <li><a href="../publications.html">Publications</a></li>
+                              <li><a href="../software.html">Software</a></li>
+                              <li><a href="../people.html">People</a></li>
+                              <li><a href="../collaborate.html">Collaborate</a></li>
+                              <li><a href="../contact.html">Contact</a></li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
 
-        <div class="navbar navbar-inverse">
-          <div class="navbar-inner">
-            <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
-            <!-- <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button> -->
-            <a class="brand" href="../../index.html">AlloSphere Research Group</a>
-            <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
-            <div class="nav-collapse collapse">
-              <ul class="nav">
-                <li><a href="facility.html">Facility</a></li>
-                <li><a href="../news.html">News</a></li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Research <b class="caret"></b></a>
-                  <ul class="dropdown-menu">
-                    <li class="nav-header">Areas of Research</li>                    
-                    <li><a href="#">Arts and Entertainment</a></li>
-                    <li><a href="#">Bio-technologies and medical research</a></li>
-                    <li><a href="#">Physics and Quantum Mechanics</a></li>
-                    <li><a href="#">Materials research</a></li>                    
-                    <li class="divider"></li>
-                    <li class="nav-header">Specific Projects</li>
-                    <li><a href="allobrain.html">The AlloBrain</a></li>
-                    <li><a href="hydrogen_bond.html">Multi-Center Hydrogen Bond</a></li>
-                    <li><a href="quantum.html">Quantum Mechanics in a Hydrogen-Like Atom</a></li>
-                    <li><a href="artificial_nature.html">Artificial Nature</a></li>
-                    <li><a href="graph_visualizations.html">Graph Visualization in Immersive Environments</a></li>                    
-                  </ul>
-                </li>
-                <li><a href="../people.html">People</a></li>
-                <li><a href="../contact.html">Contact</a></li>
-                <!-- Read about Bootstrap dropdowns at http://twbs.github.com/bootstrap/javascript.html#dropdowns -->
-
-              </ul>
-            </div><!--/.nav-collapse -->
-          </div><!-- /.navbar-inner -->
-        </div><!-- /.navbar -->
-
-      </div> <!-- /.container -->
-    </div><!-- /.navbar-wrapper -->
+          </div>
+      </div>
 
 
     <div id="myCarousel" class="carousel slide">
@@ -137,36 +118,45 @@
     </div>
 
     <div class="container marketing">
-      <div class="featurette">        
+      <div class="featurette">
         <h2 class="featurette-heading">The AlloBrain. <span class="muted">FMRI Visualization &amp; Sonification.</span></h2>
-        
+
         <p class='lead'>
         An experiment into multimodal data exploration, Allobrain presents a virtual world consisting of isosurfaces of brain blood density drawn
         from fMRI imaging data, attempting to provide the experience of being inside a brain as architectural space.
         </p>
-        
+
         <p class='lead'>
         Key faculty, postdoctoral, and graduate student researchers associated with the project: Professor Marcos Novak, Professor JoAnn Kuchera-Morin,
         Dr. Xavier Amatrain, Dr. Dan Overholt, Dr. Lance Putnam, Wesley Smith, John Thompson and Dr. Graham Wakefield.
         </p>
-        
+
         <h3>Publications</h3>
         <p class='lead'>
           <ul>
           <li>Thompson, J., Kuchera-Morin, J., Novak, M., Overholt, D., Putnam, L., Wakefield, G., & Smith, W. (2009).<a href='http://www.sciencedirect.com/science/article/pii/S1071581909000688' target='_blank'>The Allobrain: An interactive, stereographic, 3D
             audio, immersive virtual world</a>. <em>International Journal of Human-Computer Studies</em> 67.11 (2009): 934-946.</li>
           <li>Wakefield, G., Kuchera-Morin, J., Novak, M., Overholt, D., Putnam, L., Thompson, J., & Smith, W. (2008, January)
-            <a href='https://mat.ucsb.edu/Publications/08_Wakefield_SIDCHI_AlloBrain.pdf' target='_blank'>The AlloBrain: an interactive, stereographic, 
+            <a href='https://mat.ucsb.edu/Publications/08_Wakefield_SIDCHI_AlloBrain.pdf' target='_blank'>The AlloBrain: an interactive, stereographic,
             3D audio immersive environment</a>.In <em>CHI Conference Workshop on Sonic Interaction Design</em>.
           </li>
           </ul>
       </div>
-      
+
       <img src="../../assets/img/AlloBrain_2.jpg">
-      
+
+      <br>
+      <br>
+      <hr>
+
+      <!-- FOOTER -->
       <footer>
-        <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>&copy; 2014 AlloSphere Research Group</p>
+          <p class="pull-right"><a href="#">Back to top</a></p>
+          <p>
+              The AlloSphere Research Facility. University of California, Santa Barbara.
+              <br>
+              &copy; 2016 The Regents of the University of California, All Rights Reserved.
+          </p>
       </footer>
 
     </div>
